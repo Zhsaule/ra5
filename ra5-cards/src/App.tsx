@@ -1,10 +1,10 @@
 // import './App.css'
 import Cards from './components/Cards/Cards';
 
-const App = () => {
+function App () {
     return (
       <Cards />
     );
-};
+}
   
-export default App
+export default App;

@@ -1,7 +1,7 @@
 import News from "./News";
 import reactLogo from '../../assets/react.svg';
 
-/** Список новостей*/
+/** Список новостей */
 export default function NewsList() {
   return (
     <div>
