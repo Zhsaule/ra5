@@ -30,6 +30,6 @@
 }
 
 .collapse-content.open {
-  max-height: 500px;
+  max-height: 200px;
   opacity: 1;
 }

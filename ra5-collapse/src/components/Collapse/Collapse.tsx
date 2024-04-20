@@ -7,9 +7,12 @@ interface CollapseProps {
   children: React.ReactNode;
 }
 
-export default function Collapse ({ collapsedLabel = 'Развернуть', expandedLabel = 'Свернуть', children }: CollapseProps) {
+export default function Collapse ({ 
+  collapsedLabel = 'Развернуть', 
+  expandedLabel = 'Свернуть', 
+  children 
+}: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
