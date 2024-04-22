@@ -9,8 +9,8 @@ function App () {
       <div className="card-group">
         <CardBS 
           image="https://netology.ru/_next/static/media/image.36b3e565.png"
-          title="Название карточки 1"
-          text="Текст карточки 1"
+          title="Название карточки"
+          text="Текст карточки"
           btn_name="Кнопка"
         />
         <br/>
@@ -18,14 +18,14 @@ function App () {
         image={Image1}
         title="Card title"
         text="Some quick example text to build on the card title and make up the bulk of the card's content."
-        btn_name="Кнопка 2"
+        btn_name="Go somewhere"
         />
         <br/>
         <Card 
         image={Image2}
         title="Special title treatment"
         text="With supporting text below as a natural lead-in to additional content."
-        btn_name="Кнопка 2"
+        btn_name="Go somewhere"
         />
       </div>
     );
