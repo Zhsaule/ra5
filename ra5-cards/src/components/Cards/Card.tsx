@@ -1,32 +1,21 @@
-type CardProps = {
-  title: string;
-  imageUrl?: string;
-  imageAlt?: string;
-  className?: string;
-  textContent?: React.ReactNode;
-  children?: React.ReactNode;
-};
+import Button from 'react-bootstrap/Button';
+import CardRBS from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Card = ({ 
-  title, 
-  imageUrl, 
-  imageAlt,
-  className = '',
-  textContent,
-  children 
-}: CardProps) => {
-  const cardClasses = `card ${className || ''}`.trim();
-
+function Card(props: { image?: string; title: string; text: string; btn_name: string; }) {
+  const {image, title, text, btn_name} = props;
   return (
-    <div className={cardClasses}  style={{ width: '18rem' }}>
-      {imageUrl && <img src={imageUrl} className="card-img-top" alt={imageAlt} />}
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{textContent}</p>
-        {children}
-      </div>
-    </div>
+    <CardRBS style={{ width: '18rem' }}>
+      <CardRBS.Img variant="top" src={image} />
+      <CardRBS.Body>
+        <CardRBS.Title>{title}</CardRBS.Title>
+        <CardRBS.Text>
+          {text}
+        </CardRBS.Text>
+        <Button variant="primary">{btn_name}</Button>
+      </CardRBS.Body>
+    </CardRBS>
   );
-};
+}
 
 export default Card;
