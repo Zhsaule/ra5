@@ -1,20 +1,28 @@
-import Button from 'react-bootstrap/Button';
-import CardRBS from 'react-bootstrap/Card';
+import CardBody from './CardBody';
+import CardTitle from './CardTitle';
+import CardText from './CardText';
+import CardImage from './CardImage';
+import CardButton from './CardButton';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function Card(props: { image?: string; title: string; text: string; btn_name: string; }) {
+type CardProps = {
+  image?: string; 
+  title: string; 
+  text: string; 
+  btn_name: string; 
+};
+
+const Card = (props: CardProps) => {
   const {image, title, text, btn_name} = props;
   return (
-    <CardRBS style={{ width: '18rem' }}>
-      <CardRBS.Img variant="top" src={image} />
-      <CardRBS.Body>
-        <CardRBS.Title>{title}</CardRBS.Title>
-        <CardRBS.Text>
-          {text}
-        </CardRBS.Text>
-        <Button variant="primary">{btn_name}</Button>
-      </CardRBS.Body>
-    </CardRBS>
+    <div className="card" style={{width: '18rem'}}>
+      <CardImage src={image} altimg="Description" />
+      <CardBody>
+        <CardTitle>{title} </CardTitle>
+        <CardText>{text} </CardText>
+        <CardButton href="#">{btn_name} </CardButton>
+      </CardBody>
+    </div>
   );
 }
 
